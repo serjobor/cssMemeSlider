@@ -1,0 +1,86 @@
+
+* {
+    box-sizing: border-box;
+
+    margin: 0px;
+    padding: 0px;
+
+    /* border: 1px solid rgb(0, 0, 0); */
+
+    /* list-style: none; */
+    /* text-decoration: none; */
+}
+
+.main-container {
+    /* background-color: rgb(0, 0, 0); */
+}
+
+.slider-container {
+    display: flex;
+    overflow-x: scroll;
+
+    margin: 0px auto;
+    width: 800px;
+}
+
+.slider-container::-webkit-scrollbar {
+    /* display: none; */
+}
+
+.img-slid {
+    margin-right: 10px;
+}
+
+.meme-img {
+    height: 500px;
+    width: 800px;
+}
+
+.text-and-buttons {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0px auto;
+
+    width: 800px;
+}
+
+.text-container {
+    display: flex;
+    overflow-x: scroll;
+
+    /* margin: 0px auto; */
+
+    width: 430px;
+}
+
+.text-slider {
+    display: flex;
+}
+
+.text-slid {
+    width: 430px;
+    margin-right: 10px;
+}
+
+.meme-texts {
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+}
+
+.buttons-container {
+    /* margin: 0px auto; */
+}
+
+.btn-style {
+    min-width: 12px;
+    height: 12px;
+
+    background-color: blueviolet;
+
+    border-radius: 100px;
+    border: 2px solid blue;
+
+    cursor: pointer;
+}
