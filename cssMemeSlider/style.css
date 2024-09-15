@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
 
@@ -7,16 +6,18 @@
 
     /* border: 1px solid rgb(0, 0, 0); */
 
-    /* list-style: none; */
-    /* text-decoration: none; */
+    font-size: 10px;
 }
 
 body {
-    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    /* background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c); */
+    background: linear-gradient(0.25turn, #96c6f7, #dd985f, #b14bed);
+
+    /* background-image: url(./mems/background.jpg); */
 }
 
 .main-container {
-
+    margin-top: 20px;
 }
 
 .slider-container {
@@ -33,7 +34,6 @@ body {
 
 .img-slid {
     margin-right: 10px;
-    /* margin-left: 5px; */
 }
 
 .meme-img {
@@ -54,8 +54,6 @@ body {
     display: flex;
     overflow-x: scroll;
 
-    /* margin: 0px auto; */
-
     width: 430px;
 }
 
@@ -74,7 +72,7 @@ body {
 
 .meme-texts {
     font-weight: 800;
-    font-size: 20px;
+    font-size: 2rem;
     color: black;
 }
 
@@ -85,16 +83,13 @@ body {
 .buttons-elem {
     display: flex;
     justify-content: center;
-    align-items: center;
 
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
 
     cursor: pointer;
 
     border: none;
-    /* font: inherit; */
-    /* color: inherit; */
     background-color: inherit;
     cursor: pointer;
 }
@@ -103,10 +98,9 @@ body {
     min-width: 16px;
     height: 16px;
 
-    background-color: #3da6f1;
-
     border-radius: 100px;
-    border: 2px solid #3da6f1;
+    background-color: #96c6f7;
+    border: 2px solid #96c6f7;
 
     transition: 0.3s;
 }
@@ -119,4 +113,58 @@ body {
 .buttons-elem:active .btn-style{
     transform: translateY(2px);
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.buttons-elem.active-btn .btn-style{
+    background-color: inherit;
+    border: 2px solid #96c6f7;
+}
+
+.buttons-elem.active-btn:hover .btn-style{
+    border-color: white;
+}
+
+
+@media (max-width: 650px){   
+    .slider-container {
+        width: 450px;
+    }
+    
+    .meme-img {
+        width: 450px;
+    }
+    
+    .text-and-buttons {
+        width: 450px;
+        flex-direction: column-reverse;
+    }
+    
+    .text-container {
+        margin-top: 13px;
+        width: 430px;
+    }
+    
+    .text-slid {
+        width: 430px;
+        margin-right: 10px;
+    }
+    
+    .meme-texts {
+        font-size: 1.5rem;
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .buttons-elem {
+        height: 20px;
+        width: 20px;
+    }
+    
+    .btn-style {
+        min-width: 13px;
+        height: 13px;
+    }
 }

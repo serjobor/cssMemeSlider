@@ -3,45 +3,86 @@ document.addEventListener("DOMContentLoaded", function(){
     let ScrollInSliderContainer = document.querySelector(".slider-container");
     let ScrollInTextrContainer = document.querySelector(".text-container");
 
-    let oneBtn      = document.getElementById("btnOne"  );
-    let btnTwo      = document.getElementById("btnTwo"  );
+    let oneBtn      = document.getElementById("btnOne");
+    let btnTwo      = document.getElementById("btnTwo");
     let btnThree    = document.getElementById("btnThree");
-    let btnFour     = document.getElementById("btnFour" );
-    let btnFive     = document.getElementById("btnFive" );
+    let btnFour     = document.getElementById("btnFour");
+    let btnFive     = document.getElementById("btnFive");
 
-    let count = 1;
+    let count = 0;
 
-    // document.querySelector(".btn-style").style.backgroundColor = "inherit";
+    const arrButtons = [oneBtn, btnTwo, btnThree, btnFour, btnFive];
+
+    oneBtn.classList.add("active-btn");
+
+    const screenWidth = window.innerWidth;
+
+    function addHoleInBtn(){
+        for(let i in arrButtons){
+            if(i === count){
+                arrButtons[i].classList.remove("active-btn");
+            }
+        }
+    }
 
     function ClickOnBtn(button) {
         button.addEventListener('click', ()=> {
-        // document.getElementById(count).style.backgroundColor = "#3da6f1";
-        // document.getElementById(count).style.borderColor = "#3da6f1";
+            // console.log("начальная позиция count: " + count);
 
-        console.log("начальная позиция count: " + count);
+            oneBtn.classList.remove("active-btn");
+
+            addHoleInBtn();
+            button.classList.add("active-btn");
+
             if(button.value >= count ){
-                ScrollInSliderContainer.style.scrollBehavior = "smooth";
-                ScrollInSliderContainer.scrollLeft += 610 * (button.value - count);
-    
-                ScrollInTextrContainer.style.scrollBehavior = "smooth";
-                ScrollInTextrContainer.scrollLeft += 440 * (button.value - count);
-    
+                if(screenWidth > 650){
+                    ScrollInSliderContainer.style.scrollBehavior = "smooth";
+                    ScrollInSliderContainer.scrollLeft += 610 * (button.value - count);
+                    
+                    ScrollInTextrContainer.style.scrollBehavior = "smooth";
+                    ScrollInTextrContainer.scrollLeft += 440 * (button.value - count);
+                }else {
+                    ScrollInSliderContainer.style.scrollBehavior = "smooth";
+                    ScrollInSliderContainer.scrollLeft += 460 * (button.value - count);
+        
+                    ScrollInTextrContainer.style.scrollBehavior = "smooth";
+                    ScrollInTextrContainer.scrollLeft += 440 * (button.value - count);
+                }
                 count = button.value;
-                // document.getElementById(count).style.backgroundColor = "inherit";
 
             }else {
-                ScrollInSliderContainer.style.scrollBehavior = "smooth";
-                ScrollInSliderContainer.scrollLeft -= 610 * (count - button.value);
+                if(screenWidth > 650){
+                    ScrollInSliderContainer.style.scrollBehavior = "smooth";
+                    ScrollInSliderContainer.scrollLeft -= 610 * (count - button.value);
+        
+                    ScrollInTextrContainer.style.scrollBehavior = "smooth";
+                    ScrollInTextrContainer.scrollLeft -= 440 * (count - button.value);
+                }else {
+                    ScrollInSliderContainer.style.scrollBehavior = "smooth";
+                    ScrollInSliderContainer.scrollLeft -= 460 * (count - button.value);
     
-                ScrollInTextrContainer.style.scrollBehavior = "smooth";
-                ScrollInTextrContainer.scrollLeft -= 440 * (count - button.value);
-    
+                    ScrollInTextrContainer.style.scrollBehavior = "smooth";
+                    ScrollInTextrContainer.scrollLeft -= 440 * (count - button.value);
+                }
                 count = button.value;
-                // document.getElementById(count).style.backgroundColor = "inherit";
             }
-        console.log("конечная позиция count: " + count);
+        // console.log("конечная позиция count: " + count);
         });
     }
+
+    if(screenWidth < 650){
+        // location.reload();
+    }
+
+    window.addEventListener('resize', () => {
+        if(screenWidth <= 650){
+            location.reload();
+        }
+
+        if(screenWidth > 650){
+            location.reload();
+        }
+    });
 
     ClickOnBtn(oneBtn);
     ClickOnBtn(btnTwo);
