@@ -24,7 +24,7 @@ body {
 .slider-container {
     display: flex;
     overflow-x: scroll;
-
+    overflow: hidden;
     margin: 0 auto;
     /* width: 600px; */
     width: 60rem;
