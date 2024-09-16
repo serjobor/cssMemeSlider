@@ -41,12 +41,18 @@ document.addEventListener("DOMContentLoaded", function(){
                     
                     ScrollInTextrContainer.style.scrollBehavior = "smooth";
                     ScrollInTextrContainer.scrollLeft += 440 * (button.value - count);
-                }else {
+                }else if (screenWidth > 500) {
                     ScrollInSliderContainer.style.scrollBehavior = "smooth";
                     ScrollInSliderContainer.scrollLeft += 460 * (button.value - count);
         
                     ScrollInTextrContainer.style.scrollBehavior = "smooth";
                     ScrollInTextrContainer.scrollLeft += 440 * (button.value - count);
+                } else {
+                    ScrollInSliderContainer.style.scrollBehavior = "smooth";
+                    ScrollInSliderContainer.scrollLeft += 410 * (button.value - count);
+        
+                    ScrollInTextrContainer.style.scrollBehavior = "smooth";
+                    ScrollInTextrContainer.scrollLeft += 410 * (button.value - count);
                 }
                 count = button.value;
 
@@ -57,12 +63,18 @@ document.addEventListener("DOMContentLoaded", function(){
         
                     ScrollInTextrContainer.style.scrollBehavior = "smooth";
                     ScrollInTextrContainer.scrollLeft -= 440 * (count - button.value);
-                }else {
+                }else if (screenWidth > 500) {
                     ScrollInSliderContainer.style.scrollBehavior = "smooth";
                     ScrollInSliderContainer.scrollLeft -= 460 * (count - button.value);
-    
+        
                     ScrollInTextrContainer.style.scrollBehavior = "smooth";
                     ScrollInTextrContainer.scrollLeft -= 440 * (count - button.value);
+                } else {
+                    ScrollInSliderContainer.style.scrollBehavior = "smooth";
+                    ScrollInSliderContainer.scrollLeft -= 410 * (count - button.value);
+        
+                    ScrollInTextrContainer.style.scrollBehavior = "smooth";
+                    ScrollInTextrContainer.scrollLeft -= 410 * (count - button.value);
                 }
                 count = button.value;
             }

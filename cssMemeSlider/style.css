@@ -144,7 +144,7 @@ body {
     border-color: white;
 }
 
-
+/*добавил для нормального отображения у себя на телефоне (к заданию не относиться)*/
 @media (max-width: 650px){   
     .slider-container {
         /* width: 450px; */
@@ -173,6 +173,61 @@ body {
         /* width: 430px;
         margin-right: 10px; */
         width: 43rem;
+        margin-right: 1rem;
+    }
+    
+    .meme-texts {
+        font-size: 1.5rem;
+    }
+
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .buttons-elem {
+        /* height: 20px;
+        width: 20px; */
+        height: 2rem;
+        width: 2rem;
+    }
+    
+    .btn-style {
+        /* min-width: 13px;
+        height: 13px; */
+        min-width: 1.3rem;
+        height: 1.3rem;
+    }
+}
+
+@media (max-width: 420px){   
+    .slider-container {
+        /* width: 450px; */
+        width: 40rem;
+    }
+    
+    .meme-img {
+        /* width: 450px; */
+        width: 40rem;
+    }
+    
+    .text-and-buttons {
+        /* width: 450px; */
+        width: 40rem;
+        flex-direction: column-reverse;
+    }
+    
+    .text-container {
+        /* margin-top: 13px;
+        width: 430px; */
+        margin-top: 1.3rem;
+        width: 40rem;
+    }
+    
+    .text-slid {
+        /* width: 430px;
+        margin-right: 10px; */
+        width: 40rem;
         margin-right: 1rem;
     }
     
