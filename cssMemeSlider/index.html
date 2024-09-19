@@ -1,86 +1,83 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meme Slider</title>
-
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>CSS Meme Slider</title>
 </head>
 <body>
-    <main class="main-container">
-        <div class="slider-container">
-            <div class="img-slid">
-                <img class="meme-img" src="../cssMemeSlider/mems/img1.jpg" alt="meme don't load">
-            </div>
+    <div class="wrapper">
+        <input type="radio" name="slides" id="slide1" checked />
+        <input type="radio" name="slides" id="slide2" />
+        <input type="radio" name="slides" id="slide3" />
+        <input type="radio" name="slides" id="slide4" />
+        <input type="radio" name="slides" id="slide5" />
 
-            <div class="img-slid">
-                <img class="meme-img" src="../cssMemeSlider/mems/img2.jpg" alt="meme don't load">
-            </div>
+        <div class="slider">
+            <div class="slider-line">
+                <div class="slider-slide">
+                    <img src="../cssMemeSlider/mems/img1.jpg" alt="first slide" class="slider-image"/>
+                </div>
 
-            <div class="img-slid">
-                <img class="meme-img" src="../cssMemeSlider/mems/img3.jpg" alt="meme don't load">
-            </div>
+                <div class="slider-slide">
+                    <img src="../cssMemeSlider/mems/img2.jpg" alt="second slide" class="slider-image"/>
+                </div>
 
-            <div class="img-slid">
-                <img class="meme-img" src="../cssMemeSlider/mems/img4.jpg" alt="meme don't load">
-            </div>
+                <div class="slider-slide">
+                    <img src="../cssMemeSlider/mems/img3.jpg" alt="third slide" class="slider-image"/>
+                </div>
 
-            <div class="img-slid">
-                <img class="meme-img" src="../cssMemeSlider/mems/img5.jpg" alt="meme don't load">
-            </div>
-        </div>
-
-        <div class="text-and-buttons">
-            <div class="text-container">
-                <div class="text-slider">
-                    <div class="text-slid">
-                        <span class="meme-texts" id="textOne"   >Теперь я не платежоспособен</span> 
-                    </div>
-    
-                    <div class="text-slid">
-                        <span class="meme-texts" id="textTwo"   >*Слезы ожирения*</span> 
-                    </div>
-    
-                    <div class="text-slid">
-                        <span class="meme-texts" id="textThree" >Я НЕ УМЕЮ СЕБЯ КОНТРОЛИРОВАТЬ</span> 
-                    </div>
-    
-                    <div class="text-slid">
-                        <span class="meme-texts" id="textFour"  >- Мне нужно немного свежего воздуха и латте</span> 
-                    </div>
-    
-                    <div class="text-slid">
-                        <span class="meme-texts" id="textFive"  >- Нам нужен план <br>- Как насчет неконтролируемых рыданий? </span>
-                    </div>
+                <div class="slider-slide">
+                    <img src="../cssMemeSlider/mems/img4.jpg" alt="fourth slide" class="slider-image"/>
+                </div>
+                
+                <div class="slider-slide">
+                    <img src="../cssMemeSlider/mems/img5.jpg" alt="fife slide" class="slider-image"/>
                 </div>
             </div>
 
-            <div class="buttons-container">
-                <button class="buttons-elem" id="btnOne" value="0">
-                    <span class="btn-style" id="0"></span> 
-                </button>
-                
-                <button class="buttons-elem" id="btnTwo" value="1">
-                    <span class="btn-style" id="1"></span> 
-                </button>
+            <div class="slider-bottom">
+                <div class="text-wrapper">
+                    <ul class="text-list">
+                        <li class="slider-text">Теперь я не платежоспособен</li>
+                        <li class="slider-text">*Слезы ожирения*</li>
+                        <li class="slider-text">Я НЕ УМЕЮ СЕБЯ КОНТРОЛИРОВАТЬ</li>
+                        <li class="slider-text">- Мне нужно немного свежего воздуха и латте</li>
+                        <li class="slider-text">- Нам нужен план <br>- Как насчет неконтролируемых рыданий?</li>
+                    </ul>
+                </div>
+                <div class="pagination">
+                    <label for="slide1" class="pagination-label">
+                        <span class="pagination-dot dot1"></span>
+                    </label>
 
-                <button class="buttons-elem" id="btnThree"  value="2">
-                    <span class="btn-style" id="2"></span> 
-                </button>
+                    <label for="slide2" class="pagination-label">
+                        <span class="pagination-dot dot2"></span>
+                    </label>
 
-                <button class="buttons-elem" id="btnFour" value="3">
-                    <span class="btn-style" id="3"></span> 
-                </button>
+                    <label for="slide3" class="pagination-label">
+                        <span class="pagination-dot dot3"></span>
+                    </label>
 
-                <button class="buttons-elem" id="btnFive" value="4">
-                    <span class="btn-style" id="4"></span> 
-                </button>
+                    <label for="slide4" class="pagination-label">
+                        <span class="pagination-dot dot4"></span>
+                    </label>
 
+                    <label for="slide5" class="pagination-label">
+                        <span class="pagination-dot dot5"></span>
+                    </label>
+                </div>
             </div>
         </div>
-    </main>
-
-    <script src="index.js"></script>
+    </div>
 </body>
 </html>
+
+<!--            
+Теперь я не платежоспособен                 
+*Слезы ожирения*                            
+Я НЕ УМЕЮ СЕБЯ КОНТРОЛИРОВАТЬ               
+- Мне нужно немного свежего воздуха и латте 
+- Нам нужен план <br>- Как насчет неконтролируемых рыданий? 
